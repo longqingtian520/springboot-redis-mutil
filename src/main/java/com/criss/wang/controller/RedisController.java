@@ -8,6 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ *
+ * author: wangqiubao
+ *
+ * date: 2019-02-15 15:49:26
+ *
+ * describe:
+ */
 @RestController
 public class RedisController {
 

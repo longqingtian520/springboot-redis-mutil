@@ -23,8 +23,20 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ *
+ * author: wangqiubao
+ *
+ * date: 2019-02-15 15:49:46
+ *
+ * describe: 配置多个redis数据源
+ */
 @Configuration
 public class RedisAutoConfig {
+
+	// 注意：有多个ConnectionFactory存在时，在创建默认的RedisTemplate就不知道该选择哪一个了，
+	// 所以需要借助@Primary来指定默认的连接工厂，然后在使用工程的时候，通过@Qualifier注解来显示指定，
+	// 我需要的工厂是哪个（主要是localRedisTemplate这个bean的定义，如果不加，则会根据defaultLettuceConnectionFactory这个实例来创建Redis连接了）
 
 	@Primary
 	@Bean
