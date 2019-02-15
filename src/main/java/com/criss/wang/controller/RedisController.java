@@ -34,8 +34,8 @@ public class RedisController {
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String testSet() throws InterruptedException {
 		String vo = "kdjfkd";
-		this.localRedisTemplate.opsForValue().set("study", vo);
-		this.defaultRedisTemplate.opsForValue().set("aa", vo);
+		this.localRedisTemplate.opsForValue().set("db", vo);
+		this.defaultRedisTemplate.opsForValue().set("db", vo);
 
 
 		localRedisTemplate.opsForValue().set("key", "value", 7000, TimeUnit.MILLISECONDS);
