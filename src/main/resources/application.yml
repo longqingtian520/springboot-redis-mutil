@@ -4,21 +4,32 @@ server:
   
 spring:
   redis:
-    host: 192.168.83.100
-    port: 6379
-    database: 0
-    password: wangqiubao
+    host: redis-node
+    port: 6381
+    database: 14
+    password: ucare@test!123
     lettuce:
       pool:
         max-active: 32
         max-wait: 300
         max-idle: 16
         min-idle: 8
-  local-redis:
-    host: 192.168.83.100
-    port: 6380
-    database: 0
-    password: wangqiubao
+  redis-two:
+    host: redis-node
+    port: 6381
+    database: 15
+    password: ucare@test!123
+    lettuce:
+      pool:
+        max-active: 16
+        max-wait: 100
+        max-idle: 8
+        min-idle: 4
+  redis-three:
+    host: redis-node
+    port: 6381
+    database: 13
+    password: ucare@test!123
     lettuce:
       pool:
         max-active: 16
